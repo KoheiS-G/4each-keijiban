@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+/*
+アスタリスクはすべてという意味、つまりすべての要素に以下のプロパティを適用するということ
+box-sizingプロパティのborder-boxは要素の大きさをborderまでとするという意味
+例えばwidthを設定するときなどにはborderまでを計算に含めて横幅が決まる
+アスタリスクでwidthとheightプロパティをそれぞれ0pxに設定しておくと、divを追加したときのデフォルトでついている余白を消去することができる
+*/
+
+.header-list {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+}
+
+.header-list ul{
+    display: flex;
+}
+/*
+displayプロパティのflexは横並びにしたい要素の親要素に記述する
+text-alignプロパティなども同様である
+プロパティを適用したい要素自体に記述するプロパティとその親要素に記述しなければならないプロパティがあるのでここは注意
+親要素いっぱいに子要素を広げたいときにはflex:autoというプロパティを”子要素”に記述する
+子要素のサイズに応じて折返しを入れたいときはflex-wrapプロパティを使う
+折り返したい要素の親要素にwrapと設定し、折り返したい要素自身に列数に応じたwidthを指定する
+また、親要素にdisplay:flexを使うと子要素が横並びになるが、flex-direction: columnを設定すると子要素が上から下に並ぶ
+*/
+
+.header-list li {
+    margin-right: 20px;
+    list-style: none;
+    line-height: 50px;
+    padding: 0px 10px;
+    transition: 0.5s;
+}
+
+.header-list li:hover{
+    background-color: #a6a6a6;
+}
+
+.main-wrapper {
+    clear: both;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+.left {
+    width: 70%;
+}
+
+.left h1{
+    border-bottom: 3px solid black;
+    border-left: 6px solid black;
+    padding-left: 8px;
+}
+
+form h3{
+    margin-left: 20px;
+    padding-left: 5px;
+    border-left: 5px solid #BD1E66;
+}
+
+form{
+    margin: 0 auto;
+    background-color: #fbfbfb;
+    border: 3px solid #ebebeb;
+    border-radius: 10px;
+    width: 95%;
+}
+
+.form{
+    padding: 15px;
+}
+
+.input{
+    display: block;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    padding: 5px;
+    width: 95%;
+}
+
+.submit{
+    border: 1px solid lightgray;
+    padding: 4px 10px;
+    color: white;
+    background-color: #bfbfbf;
+    border-radius: solid 2px gray;
+    margin: 15px;
+    box-shadow: 0 3px #a1a1a1;
+    transition: 0.5s;
+}
+
+.submit:hover{
+    background-color: #d6d6d6;
+}
+
+.submit:active{
+    background-color: #bfbfbf;
+    margin-top: 3px;
+    box-shadow: 0px 0px;
+}
+
+.content-wrapper{
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.content{
+    background-color: #fbfbfb;
+    border: 3px solid #ebebeb;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+}
+
+.content h3{
+    border-bottom: 1px dotted;
+}
+
+.content .sentence{
+    
+}
+
+.content .author{
+    font-size: 13px;
+}
+
+.right {
+    width: 30%;
+}
+
+.list h3{
+    border-bottom: 1px dotted;
+}
+
+.list ul li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.footer-wrapper{
+    background-color: black;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
